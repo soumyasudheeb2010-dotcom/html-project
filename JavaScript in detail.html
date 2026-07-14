@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Magic Text Converter</title>
+    </head>
+    <body>
+        <h2>Magic text Converter</h2>
+        <h3 id="result"></h3>
+        <input id="input" placeholder="Enter text or number">
+        <br><br>
+
+        <button onclick="checktype()">Check Type</button>
+        <button onclick="convertString()">To String</button>
+        <button onclick="convertNumber()">To Number</button>
+        <button onclick="replaceWord()">Replace Word</button>
+
+        <script>
+            function checktype ()
+            {
+                let value = document.getElementById("input").value;
+                document.getElementById("result").innerHTML="Type: " type of values;
+            }
+
+            function convertString() {
+                let value = document.getElementById("input").value;
+                document.getElementById("result").innerHTML = 
+                "String: " + String(value);
+            }
+
+            function convertNumber() {
+                try {
+                    let value = document.getELementById("input").value;
+                    let num = Number(value);
+
+                    if(isNaN(num))
+                    throw "Not a valid number";
+                document.getElementById("result").innerHTMl =
+                "Number: " + num;
+                }
+
+                catch(error) {
+                    document.getElementById("result").innerHTML =
+                    error;
+                }
+
+                function replaceWord() {
+                    let value = document.getElemetById("input").value;
+                    let newText = value.replace("cat","dog");
+                    document.getElementById("result").innerHTML = 
+                    newText;
+                }
+            }
+        </script>
+    </body>
+</html>
